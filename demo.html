@@ -1,0 +1,25 @@
+<html>
+<head>
+
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="monthDatepicker.js"></script>
+	
+</head>
+<body>
+    <label for="startDate">Month :</label>
+    <input name="startDate" id="startDate" class="date-picker month-only" />
+<br />
+	<label for="startDate2">Regular Date :</label>
+	<input name="startDate2" id="startDate2" class="regularDatePicker" />
+	
+<script type="text/javascript">
+$(function() {
+    $('.date-picker.month-only').monthDatepicker( { onClose: function(dateText, inst) { alert($(this).datepicker("getDate")); } });
+	$('.regularDatePicker').datepicker();
+});
+
+</script>
+</body>
+</html>
